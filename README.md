@@ -2,6 +2,11 @@
 
 Task 2 Repo
 
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/brianobot/zuri_internship_task_2)
+[![Tests Passed](https://img.shields.io/badge/Tests-Passed-brightgreen.svg)](https://your-test-results-url)
+[![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
+
+
 # Person Webservice Documentation
 
 ## Introduction
