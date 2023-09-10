@@ -237,3 +237,6 @@ print(response.json())
 ## Conclusion
 
 The Person Webservice provides a simple and easy-to-use interface for managing `Person` objects. It allows for creating, retrieving, updating, and deleting `Person` records through a RESTful API. Use the provided endpoints to interact with the service and manage your `Person` data.
+
+### Maintainer:
+- Brian Obot <brianobot9@gmail.com>
