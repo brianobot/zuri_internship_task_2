@@ -7,4 +7,5 @@ djangorestframework==3.14.0  # https://github.com/encode/django-rest-framework
 django-cors-headers==4.2.0  # https://github.com/adamchainz/django-cors-headers
 # DRF-spectacular for api documentation
 drf-spectacular==0.26.4  # https://github.com/tfranzel/drf-spectacular
-pytest
+pytest==7.4.2  #https://docs.pytest.org/en/latest/
+pytest-django==4.5.2 #https://pytest-django.readthedocs.io/
