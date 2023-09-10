@@ -19,23 +19,6 @@ A `Person` object represents an individual with a name.
 ## API Endpoints
 
 ### 1. Create a Person
-# Person Webservice Documentation
-
-## Introduction
-
-The **Person Webservice** is a RESTful API that allows users to interact with a `Person` resource. This webservice provides basic CRUD (Create, Read, Update, Delete) operations for managing `Person` objects.
-
-### Resource: Person
-
-A `Person` object represents an individual with a name.
-
-#### Fields
-
-- `name` (String, max length 100): The name of the person. It is a required field and must be unique.
-
-## API Endpoints
-
-### 1. Create a Person
 
 **Endpoint:** `POST /api/persons/`
 
@@ -96,15 +79,6 @@ A `Person` object represents an individual with a name.
 }
 ```
 
-## Model: Person
-
-```python
-class Person(models.Model):
-    name = models.CharField(max_length=100, blank=False, null=False, unique=True)
-    
-    def __str__(self) -> str:
-        return self.name
-```
 
 ## Example Usage
 
@@ -143,7 +117,7 @@ print(response.json())
 
 ## Error Handling
 
-- **400 Bad Request:** If the request is malformed or missing required fields.
+- **400 Bad Request:** If the request is malformed or missing required fields or the name already exists.
 - **404 Not Found:** If the requested `Person` does not exist.
 - **405 Method Not Allowed:** If an unsupported HTTP method is used on an endpoint.
 
