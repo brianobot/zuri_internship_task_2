@@ -11,3 +11,13 @@ class PersonViewSet(viewsets.ModelViewSet):
     serializer_class = PersonSerializer
     queryset = Person.objects.all()
     lookup_field = "name"
+
+    def destroy(self, request, *args, **kwargs):
+        instance: Person = self.get_object()
+        self.perform_destroy(instance)
+        return Response(
+            {
+                "message": f"Person with name '{instance.name}' has been deleted"
+            }, 
+            status=status.HTTP_204_NO_CONTENT
+        )
