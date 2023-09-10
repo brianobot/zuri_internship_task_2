@@ -169,7 +169,7 @@ The Person Webservice provides a simple and easy-to-use interface for managing `
 
 ### 2. Retrieve a Person
 
-**Endpoint:** `GET /api/persons/{id}/`
+**Endpoint:** `GET /api/persons/{name}/`
 
 **Response:**
 ```json
@@ -181,7 +181,7 @@ The Person Webservice provides a simple and easy-to-use interface for managing `
 
 ### 3. Update a Person
 
-**Endpoint:** `PUT /api/persons/{id}/`
+**Endpoint:** `PUT /api/persons/{name}/`
 
 **Request:**
 ```json
@@ -200,7 +200,7 @@ The Person Webservice provides a simple and easy-to-use interface for managing `
 
 ### 4. Delete a Person
 
-**Endpoint:** `DELETE /api/persons/{id}/`
+**Endpoint:** `DELETE /api/persons/{name}/`
 
 **Response:**
 ```json
