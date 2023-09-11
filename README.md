@@ -7,6 +7,8 @@ Task 2 Repo
 [![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
 
 
+## 🌐 BASE URL: https://brianobot.pythonanywhere.com/
+
 # Person Webservice Documentation
 
 ## Introduction
@@ -30,7 +32,7 @@ A `Person` object represents an individual with a name.
 **Request:**
 ```json
 {
-    "user_id": "john_doe_123"
+    "name": "Mark Essien"
 }
 ```
 
@@ -38,7 +40,7 @@ A `Person` object represents an individual with a name.
 ```json
 {
     "id": 1,
-    "user_id": "john_doe_123"
+    "name": "Mark Essien"
 }
 ```
 
@@ -50,7 +52,7 @@ A `Person` object represents an individual with a name.
 ```json
 {
     "id": 1,
-    "user_id": "john_doe_123"
+    "name": "Mark Essien"
 }
 ```
 
@@ -61,7 +63,7 @@ A `Person` object represents an individual with a name.
 **Request:**
 ```json
 {
-    "user_id": "john_smith_456"
+    "name": "Mark Essien Updated"
 }
 ```
 
@@ -69,7 +71,7 @@ A `Person` object represents an individual with a name.
 ```json
 {
     "id": 1,
-    "user_id": "john_smith_456"
+    "name": "Mark Essien Updated"
 }
 ```
 
@@ -93,28 +95,28 @@ import requests
 
 url = "http://example.com/api/"
 payload = {
-    "user_id": "jane_doe_789"
+    "name": "Mark Essien"
 }
 response = requests.post(url, json=payload)
 print(response.json())
 
 # Retrieving a person
-user_id = "jane_doe_789"
+user_id = 1
 url = f"http://example.com/api/{user_id}/"
 response = requests.get(url)
 print(response.json())
 
 # Updating a person
-user_id = "jane_doe_789"
+user_id = 1
 url = f"http://example.com/api/{user_id}/"
 payload = {
-    "user_id": "jane_smith_012"
+    "user_id": "mark_essien_012"
 }
 response = requests.put(url, json=payload)
 print(response.json())
 
 # Deleting a person
-user_id = "jane_smith_012"
+user_id = 1
 url = f"http://example.com/api/{user_id}/"
 response = requests.delete(url)
 print(response.json())
