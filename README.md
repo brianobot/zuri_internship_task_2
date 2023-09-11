@@ -93,7 +93,7 @@ A `Person` object represents an individual with a name.
 # Creating a new person
 import requests
 
-url = "http://example.com/api/"
+url = "https://brianobot.pythonanywhere.com/api"
 payload = {
     "name": "Mark Essien"
 }
@@ -102,22 +102,22 @@ print(response.json())
 
 # Retrieving a person
 user_id = 1
-url = f"http://example.com/api/{user_id}/"
+url = f"https://brianobot.pythonanywhere.com/api/{user_id}/"
 response = requests.get(url)
 print(response.json())
 
 # Updating a person
 user_id = 1
-url = f"http://example.com/api/{user_id}/"
+url = f"https://brianobot.pythonanywhere.com/api/{user_id}/"
 payload = {
-    "user_id": "mark_essien_012"
+    "name": "Mark Essien Updated"
 }
 response = requests.put(url, json=payload)
 print(response.json())
 
 # Deleting a person
 user_id = 1
-url = f"http://example.com/api/{user_id}/"
+url = f"https://brianobot.pythonanywhere.com/api/{user_id}/"
 response = requests.delete(url)
 print(response.json())
 ```
