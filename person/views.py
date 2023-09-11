@@ -16,8 +16,6 @@ class PersonViewSet(viewsets.ModelViewSet):
         instance_id = instance.pk
         self.perform_destroy(instance)
         return Response(
-            {
-                "message": f"Person with id '{instance_id}' has been deleted"
-            }, 
-            status=status.HTTP_204_NO_CONTENT
+            {"message": f"Person with id '{instance_id}' has been deleted"},
+            status=status.HTTP_204_NO_CONTENT,
         )

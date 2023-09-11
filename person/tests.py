@@ -1,5 +1,4 @@
 import pytest
-import requests
 from django.urls import reverse
 from rest_framework.test import APIClient
 from rest_framework.response import Response
@@ -22,9 +21,7 @@ def test_list_persons(client: APIClient):
 @pytest.mark.django_db
 def test_create_person(client: APIClient):
     url = reverse("persons:person-list")
-    data = {
-        'name': "Brian David Obot"
-    }
+    data = {"name": "Brian David Obot"}
     response: Response = client.post(url, data)
     assert response.status_code == 201
 
