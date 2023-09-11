@@ -14,19 +14,18 @@ def test_create_person():
     url = BASE_URL + "api/"
     data = {"name": "Brian David Obot"}
     response: Response = requests.post(url, data)
-    print("Response Code == ", response.status_code)
     assert response.status_code == 201
 
 
 def test_person_detail():
-    random_id = dict(requests.get(BASE_URL+"api/").json()).keys()[0]
+    random_id = list(requests.get(BASE_URL+"api/").json()[0].values())[0]
     url = BASE_URL + f"api/{random_id}/"
     response: Response = requests.get(url)
     assert response.status_code == 200
 
 
 def test_update_person():
-    random_id = dict(requests.get(BASE_URL+"api/").json()).keys()[0]
+    random_id = list(requests.get(BASE_URL+"api/").json()[0].values())[0]
     url = BASE_URL + f"api/{random_id}/"
     response: Response = requests.put(url, data={"name": "Jamie"})
     assert response.status_code == 200
@@ -34,9 +33,10 @@ def test_update_person():
 
 
 def test_delete_person():
-    random_id = dict(requests.get(BASE_URL+"api/").json()).keys()[0]
+    random_id = list(requests.get(BASE_URL+"api/").json()[0].values())[0]
     url = BASE_URL + f"api/{random_id}/"
     response: Response = requests.delete(url)
+    print("Response Code == ", response.status_code)
     assert response.status_code == 204
 
 
