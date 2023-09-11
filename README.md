@@ -128,6 +128,13 @@ print(response.json())
 - **404 Not Found:** If the requested `Person` does not exist.
 - **405 Method Not Allowed:** If an unsupported HTTP method is used on an endpoint.
 
+## Testing
+
+To Run the Automated Test, run the command (from within the project directory terminal)
+```python
+python test.py
+```
+
 ## Conclusion
 
 The Person Webservice provides a simple and easy-to-use interface for managing `Person` objects. It allows for creating, retrieving, updating, and deleting `Person` records through a RESTful API. Use the provided endpoints to interact with the service and manage your `Person` data.
