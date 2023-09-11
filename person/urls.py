@@ -7,7 +7,7 @@ app_name = "persons"
 
 
 router = DefaultRouter()
-router.register(r"persons", views.PersonViewSet, basename="person")
+router.register(r"api", views.PersonViewSet, basename="person")
 
 
 urlpatterns = [

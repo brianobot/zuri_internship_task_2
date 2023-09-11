@@ -10,7 +10,6 @@ from person.serializers import PersonSerializer
 class PersonViewSet(viewsets.ModelViewSet):
     serializer_class = PersonSerializer
     queryset = Person.objects.all()
-    lookup_field = "name"
 
     def destroy(self, request, *args, **kwargs):
         instance: Person = self.get_object()
