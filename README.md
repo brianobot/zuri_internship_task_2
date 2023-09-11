@@ -19,18 +19,18 @@ A `Person` object represents an individual with a name.
 
 #### Fields
 
-- `name` (String, max length 100): The name of the person. It is a required field and must be unique.
+- `name` (String, max length 100): The unique identifier of the person. It is a required field and must be a string.
 
 ## API Endpoints
 
 ### 1. Create a Person
 
-**Endpoint:** `POST /api/persons/`
+**Endpoint:** `POST /api/`
 
 **Request:**
 ```json
 {
-    "name": "John Doe"
+    "user_id": "john_doe_123"
 }
 ```
 
@@ -38,30 +38,30 @@ A `Person` object represents an individual with a name.
 ```json
 {
     "id": 1,
-    "name": "John Doe"
+    "user_id": "john_doe_123"
 }
 ```
 
 ### 2. Retrieve a Person
 
-**Endpoint:** `GET /api/persons/{name}/`
+**Endpoint:** `GET /api/{user_id}/`
 
 **Response:**
 ```json
 {
     "id": 1,
-    "name": "John Doe"
+    "user_id": "john_doe_123"
 }
 ```
 
 ### 3. Update a Person
 
-**Endpoint:** `PUT /api/persons/{name}/`
+**Endpoint:** `PUT /api/{user_id}/`
 
 **Request:**
 ```json
 {
-    "name": "John Smith"
+    "user_id": "john_smith_456"
 }
 ```
 
@@ -69,13 +69,13 @@ A `Person` object represents an individual with a name.
 ```json
 {
     "id": 1,
-    "name": "John Smith"
+    "user_id": "john_smith_456"
 }
 ```
 
 ### 4. Delete a Person
 
-**Endpoint:** `DELETE /api/persons/{name}/`
+**Endpoint:** `DELETE /api/{user_id}/`
 
 **Response:**
 ```json
@@ -91,38 +91,38 @@ A `Person` object represents an individual with a name.
 # Creating a new person
 import requests
 
-url = "http://example.com/api/persons/"
+url = "http://example.com/api/"
 payload = {
-    "name": "Jane Doe"
+    "user_id": "jane_doe_789"
 }
 response = requests.post(url, json=payload)
 print(response.json())
 
 # Retrieving a person
-name = "Jane Doe"
-url = f"http://example.com/api/persons/{name}/"
+user_id = "jane_doe_789"
+url = f"http://example.com/api/{user_id}/"
 response = requests.get(url)
 print(response.json())
 
 # Updating a person
-name = "Jane Doe"
-url = f"http://example.com/api/persons/{name}/"
+user_id = "jane_doe_789"
+url = f"http://example.com/api/{user_id}/"
 payload = {
-    "name": "Jane Smith"
+    "user_id": "jane_smith_012"
 }
 response = requests.put(url, json=payload)
 print(response.json())
 
 # Deleting a person
-name = "Jane Doe"
-url = f"http://example.com/api/persons/{name}/"
+user_id = "jane_smith_012"
+url = f"http://example.com/api/{user_id}/"
 response = requests.delete(url)
 print(response.json())
 ```
 
 ## Error Handling
 
-- **400 Bad Request:** If the request is malformed or missing required fields or the name already exists.
+- **400 Bad Request:** If the request is malformed or missing required fields.
 - **404 Not Found:** If the requested `Person` does not exist.
 - **405 Method Not Allowed:** If an unsupported HTTP method is used on an endpoint.
 

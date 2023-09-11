@@ -31,8 +31,8 @@ def test_create_person(client: APIClient):
 
 @pytest.mark.django_db
 def test_person_detail(client: APIClient):
-    Person.objects.create(name="James")
-    url = reverse("persons:person-detail", args=("James",))
+    james = Person.objects.create(name="James")
+    url = reverse("persons:person-detail", args=(james.pk,))
     response: Response = client.get(url)
     assert response.status_code == 200
 
@@ -40,7 +40,7 @@ def test_person_detail(client: APIClient):
 @pytest.mark.django_db
 def test_update_person(client: APIClient):
     jame = Person.objects.create(name="James")
-    url = reverse("persons:person-detail", args=("James",))
+    url = reverse("persons:person-detail", args=(jame.pk,))
     response: Response = client.put(url, data={"name": "Jamie"})
     jame.refresh_from_db()
     assert response.status_code == 200
@@ -49,7 +49,7 @@ def test_update_person(client: APIClient):
 
 @pytest.mark.django_db
 def test_delete_person(client: APIClient):
-    Person.objects.create(name="James")
-    url = reverse("persons:person-detail", args=("James",))
+    james = Person.objects.create(name="James")
+    url = reverse("persons:person-detail", args=(james.pk,))
     response: Response = client.delete(url)
     assert response.status_code == 204
