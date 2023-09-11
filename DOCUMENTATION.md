@@ -127,6 +127,7 @@ print(response.json())
 - **400 Bad Request:** If the request is malformed or missing required fields.
 - **404 Not Found:** If the requested `Person` does not exist.
 - **405 Method Not Allowed:** If an unsupported HTTP method is used on an endpoint.
+- **500 Method Server Error** Something you will not see from this project.
 
 ## Conclusion
 
