@@ -8,7 +8,9 @@ def generate_id(length: int = 10):
 
 
 class BaseModelMixin(models.Model):
-    id = models.CharField(primary_key=True, default=generate_id, editable=False, max_length=255)
+    id = models.CharField(
+        primary_key=True, default=generate_id, editable=False, max_length=255
+    )
     uid = models.CharField(default=generate_id, editable=False, max_length=255)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False, db_index=True)

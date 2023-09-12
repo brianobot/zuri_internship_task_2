@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd party apps
-    'django_extensions',
+    "django_extensions",
     "rest_framework",
     "corsheaders",
     # local apps
@@ -126,10 +126,10 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 GRAPH_MODELS = {
-    'all_applications': False,
-    'exclude_models': 'django.contrib.*',
-    'output': 'uml_diagrams\person_model.png',  # Replace with your desired path and file name
-    'layout': 'dot',
+    "all_applications": False,
+    "exclude_models": "django.contrib.*",
+    "output": "uml_diagrams\person_model.png",  # Replace with your desired path and file name
+    "layout": "dot",
 }
 
 # Internationalization
