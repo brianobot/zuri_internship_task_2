@@ -15,6 +15,10 @@ Task 2 Repo
 
 The **Person Webservice** is a RESTful API that allows users to interact with a `Person` resource. This webservice provides basic CRUD (Create, Read, Update, Delete) operations for managing `Person` objects.
 
+### UML Diagram
+
+![Person Model UML Diagram](uml_diagrams/person_model.png)
+
 ### Resource: Person
 
 A `Person` object represents an individual with a name.

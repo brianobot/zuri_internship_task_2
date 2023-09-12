@@ -41,7 +41,13 @@ def test_delete_person():
 
 
 if __name__ == "__main__":
-    print("Starting Tests🔥🔥🔥🔥")
+    print(
+    """
+    ++++++++++++++++++++++++++++++++++
+    Starting Tests🔥🔥🔥🔥
+    ++++++++++++++++++++++++++++++++++
+    """
+    )
     test_functions = [
         test_list_persons,
         test_create_person,
@@ -60,7 +66,13 @@ if __name__ == "__main__":
         else:
             passed.append(test.__name__)
 
-    print("Test Completed 💧💧💧💧")
+    print(
+    """
+    ++++++++++++++++++++++++++++++++++
+    Test Completed 💧💧💧💧
+    ++++++++++++++++++++++++++++++++++
+    """
+    )
     print(
         f"-------------{len(passed)} Tests Passed, {len(errors)} Tests Failed ----------------"
     )
