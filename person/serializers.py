@@ -9,4 +9,6 @@ class PersonSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+            "created_at",
+            "updated_at",
         ]
